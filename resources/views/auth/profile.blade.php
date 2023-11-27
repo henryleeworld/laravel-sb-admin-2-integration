@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 @error('name')
-                                <div class="form-group custom-control">
+                                <div class="mb-3 custom-control">
                                     <label class="">{{ $message }}</label>
                                 </div>
                                 @enderror
@@ -42,7 +42,7 @@
                                     </div>
                                 </div>
                                 @error('email')
-                                <div class="form-group custom-control">
+                                <div class="mb-3 custom-control">
                                     <label class="">{{ $message }}</label>
                                 </div>
                                 @enderror
@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                                 @error('password')
-                                <div class="form-group custom-control">
+                                <div class="mb-3 custom-control">
                                     <label class="">{{ $message }}</label>
                                 </div>
                                 @enderror

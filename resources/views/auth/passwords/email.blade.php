@@ -14,13 +14,13 @@
                                 </div>
                                 <form class="user" action="{{ route('password.email') }}" method="post">
                                     @csrf
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-user @error('email') is-invalid @enderror"
                                                id="exampleInputEmail" aria-describedby="emailHelp"
                                                placeholder="{{ __('Enter Email Address...') }}">
                                     </div>
                                     @error('email')
-                                    <div class="form-group custom-control">
+                                    <div class="mb-3 custom-control">
                                         <label class="">{{ $message }}</label>
                                     </div>
                                     @enderror

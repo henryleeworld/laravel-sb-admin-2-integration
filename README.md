@@ -36,5 +36,5 @@ $ php artisan migrate
 ![](https://i.imgur.com/7HUDuaw.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/FLjZZ26.png)
+![](https://i.imgur.com/hYUZmfU.png)
 > 省去不少前端布局的時間，可以把時間拿來處理各項統計資料的分析及產出

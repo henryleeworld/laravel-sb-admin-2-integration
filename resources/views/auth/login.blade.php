@@ -13,27 +13,27 @@
                                 </div>
                                 <form action="{{ route('login') }}" method="post" class="user">
                                     @csrf
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <input type="email" name="email" value="{{ old('email') }}"
                                                class="form-control form-control-user @error('email') is-invalid @enderror"
                                                id="exampleInputEmail" aria-describedby="emailHelp"
                                                placeholder="{{ __('Enter Email Address') }}" required autofocus>
                                     </div>
                                     @error('email')
-                                    <div class="form-group custom-control">
+                                    <div class="mb-3 custom-control">
                                         <label class="">{{ $message }}</label>
                                     </div>
                                     @enderror
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                                id="exampleInputPassword" placeholder="{{ __('Password') }}" required>
                                     </div>
                                     @error('password')
-                                    <div class="form-group custom-control">
+                                    <div class="mb-3 custom-control">
                                         <label class="">{{ $message }}</label>
                                     </div>
                                     @enderror
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <div class="custom-control custom-checkbox small">
                                             <input type="checkbox" name="remember" class="custom-control-input" id="customCheck">
                                             <label class="custom-control-label" for="customCheck">{{ __('Remember Me') }}</label>

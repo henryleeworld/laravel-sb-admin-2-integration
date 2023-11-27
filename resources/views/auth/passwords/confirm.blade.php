@@ -20,13 +20,13 @@
                                 <form class="user" action="{{ route('password.confirm') }}" method="post">
                                     @csrf
 
-                                    <div class="form-group">
+                                    <div class="mb-3">
                                         <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                                id="exampleInputPassword" aria-describedby="passwordHelp"
                                                placeholder="{{ __('Enter Password') }}">
                                     </div>
                                     @error('password')
-                                    <div class="form-group custom-control">
+                                    <div class="mb-3 custom-control">
                                         <label class="">{{ $message }}</label>
                                     </div>
                                     @enderror

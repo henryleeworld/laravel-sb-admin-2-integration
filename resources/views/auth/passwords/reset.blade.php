@@ -12,22 +12,22 @@
                         <form class="user" action="{{ route('password.update') }}" method="post">
                             @csrf
                             <input type="hidden" name="token" value="{{ $token }}">
-                            <div class="form-group">
+                            <div class="mb-3">
                                 <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-user @error('email') is-invalid @enderror" id="exampleInputEmail"
                                        placeholder="{{ __('Email Address') }}">
                             </div>
                             @error('email')
-                            <div class="form-group custom-control">
+                            <div class="mb-3 custom-control">
                                 <label class="">{{ $message }}</label>
                             </div>
                             @enderror
-                            <div class="form-group row">
+                            <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                            id="exampleInputPassword" placeholder="{{ __('New Password') }}">
                                 </div>
                                 @error('password')
-                                <div class="form-group custom-control">
+                                <div class="mb-3 custom-control">
                                     <label class="">{{ $message }}</label>
                                 </div>
                                 @enderror
@@ -36,7 +36,7 @@
                                            id="exampleRepeatPassword" placeholder="{{ __('Repeat New Password') }}">
                                 </div>
                                 @error('password_confirmation')
-                                <div class="form-group custom-control">
+                                <div class="mb-3 custom-control">
                                     <label class="">{{ $message }}</label>
                                 </div>
                                 @enderror
