@@ -13,8 +13,8 @@
                             @csrf
                             <input type="hidden" name="token" value="{{ $token }}">
                             <div class="mb-3">
-                                <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-user @error('email') is-invalid @enderror" id="exampleInputEmail"
-                                       placeholder="{{ __('Email Address') }}">
+                                <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-user @error('email') is-invalid @enderror" id="email"
+                                       placeholder="{{ __('Email Address') }}" required autocomplete="email" autofocus>
                             </div>
                             @error('email')
                             <div class="mb-3 custom-control">
@@ -24,7 +24,7 @@
                             <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
-                                           id="exampleInputPassword" placeholder="{{ __('New Password') }}">
+                                           id="password" placeholder="{{ __('New Password') }}" required autocomplete="new-password">
                                 </div>
                                 @error('password')
                                 <div class="mb-3 custom-control">
@@ -33,7 +33,7 @@
                                 @enderror
                                 <div class="col-sm-6">
                                     <input type="password" name="password_confirmation" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror"
-                                           id="exampleRepeatPassword" placeholder="{{ __('Repeat New Password') }}">
+                                           id="password-confirm" placeholder="{{ __('Repeat New Password') }}" required autocomplete="new-password">
                                 </div>
                                 @error('password_confirmation')
                                 <div class="mb-3 custom-control">

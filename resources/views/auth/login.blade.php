@@ -16,8 +16,8 @@
                                     <div class="mb-3">
                                         <input type="email" name="email" value="{{ old('email') }}"
                                                class="form-control form-control-user @error('email') is-invalid @enderror"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="{{ __('Enter Email Address') }}" required autofocus>
+                                               id="email" aria-describedby="emailHelp"
+                                               placeholder="{{ __('Enter Email Address') }}" required autocomplete="email" autofocus>
                                     </div>
                                     @error('email')
                                     <div class="mb-3 custom-control">
@@ -26,7 +26,7 @@
                                     @enderror
                                     <div class="mb-3">
                                         <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
-                                               id="exampleInputPassword" placeholder="{{ __('Password') }}" required>
+                                               id="password" placeholder="{{ __('Password') }}" required autocomplete="current-password">
                                     </div>
                                     @error('password')
                                     <div class="mb-3 custom-control">
@@ -35,8 +35,8 @@
                                     @enderror
                                     <div class="mb-3">
                                         <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" name="remember" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">{{ __('Remember Me') }}</label>
+                                            <input type="checkbox" name="remember" class="custom-control-input" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                            <label class="custom-control-label" for="remember">{{ __('Remember Me') }}</label>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">

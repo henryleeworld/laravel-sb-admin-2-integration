@@ -16,8 +16,8 @@
                                     @csrf
                                     <div class="mb-3">
                                         <input type="email" name="email" value="{{ old('email') }}" class="form-control form-control-user @error('email') is-invalid @enderror"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="{{ __('Enter Email Address...') }}">
+                                               id="email" aria-describedby="emailHelp"
+                                               placeholder="{{ __('Enter Email Address...') }}" required autocomplete="email" autofocus>
                                     </div>
                                     @error('email')
                                     <div class="mb-3 custom-control">

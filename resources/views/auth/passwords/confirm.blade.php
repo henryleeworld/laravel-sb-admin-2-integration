@@ -22,8 +22,8 @@
 
                                     <div class="mb-3">
                                         <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
-                                               id="exampleInputPassword" aria-describedby="passwordHelp"
-                                               placeholder="{{ __('Enter Password') }}">
+                                               id="password" aria-describedby="passwordHelp"
+                                               placeholder="{{ __('Enter Password') }}" required autocomplete="current-password">
                                     </div>
                                     @error('password')
                                     <div class="mb-3 custom-control">

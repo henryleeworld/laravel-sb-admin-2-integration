@@ -12,8 +12,8 @@
                         <form class="user" action="{{ route('register') }}" method="post">
                             @csrf
                             <div class="mb-3">
-                                <input type="text" name="name" class="form-control form-control-user @error('name') is-invalid @enderror" id="exampleInputName"
-                                       placeholder="{{ __('Name') }}">
+                                <input type="text" name="name" class="form-control form-control-user @error('name') is-invalid @enderror" id="name"
+                                       placeholder="{{ __('Name') }}" required autocomplete="name" autofocus>
                             </div>
                             @error('name')
                             <div class="mb-3 custom-control">
@@ -21,8 +21,8 @@
                             </div>
                             @enderror
                             <div class="mb-3">
-                                <input type="email" name="email" class="form-control form-control-user @error('email') is-invalid @enderror" id="exampleInputEmail"
-                                       placeholder="{{ __('Email Address') }}">
+                                <input type="email" name="email" class="form-control form-control-user @error('email') is-invalid @enderror" id="email"
+                                       placeholder="{{ __('Email Address') }}" required autocomplete="email">
                             </div>
                             @error('email')
                             <div class="mb-3 custom-control">
@@ -32,7 +32,7 @@
                             <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
-                                           id="exampleInputPassword" placeholder="{{ __('Password') }}">
+                                           id="password" placeholder="{{ __('Password') }}" required autocomplete="new-password">
                                 </div>
                                 @error('password')
                                 <div class="mb-3 custom-control">
@@ -41,7 +41,7 @@
                                 @enderror
                                 <div class="col-sm-6">
                                     <input type="password" name="password_confirmation" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror"
-                                           id="exampleRepeatPassword" placeholder="{{ __('Repeat Password') }}">
+                                           id="password-confirm" placeholder="{{ __('Repeat Password') }}" required autocomplete="new-password">
                                 </div>
                                 @error('password_confirmation')
                                 <div class="mb-3 custom-control">
