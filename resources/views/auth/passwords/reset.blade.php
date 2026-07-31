@@ -24,7 +24,7 @@
                             <div class="row mb-3">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror"
-                                           id="password" placeholder="{{ __('New Password') }}" required autocomplete="new-password">
+                                           id="password" placeholder="{{ __('New Password') }}" required autocomplete="new-password" passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}">
                                 </div>
                                 @error('password')
                                 <div class="mb-3 custom-control">
@@ -33,7 +33,7 @@
                                 @enderror
                                 <div class="col-sm-6">
                                     <input type="password" name="password_confirmation" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror"
-                                           id="password-confirm" placeholder="{{ __('Repeat New Password') }}" required autocomplete="new-password">
+                                           id="password-confirm" placeholder="{{ __('Repeat New Password') }}" required autocomplete="new-password" passwordrules="{{ \Illuminate\Validation\Rules\Password::defaults()->toPasswordRulesString() }}">
                                 </div>
                                 @error('password_confirmation')
                                 <div class="mb-3 custom-control">

@@ -1,4 +1,4 @@
-# Laravel 12 SB Admin 2 整合
+# Laravel 13 SB Admin 2 整合
 
 整合 SB Admin 2 簡潔的管理性網站版型，高度可定製，易於使用，瀏覽器支援 IE9 以 上、FireFox、Safari、Chrome 及 Opera 的最新版本。
 
@@ -40,5 +40,5 @@ $ npm run build
 ![](https://i.imgur.com/7HUDuaw.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/5hBoiuh.png)
+![](https://i.imgur.com/AWTwf0Q.png)
 > 省去不少前端布局的時間，可以把時間拿來處理各項統計資料的分析及產出
